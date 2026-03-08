@@ -1,44 +1,82 @@
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --header-bg: #333;
+    --header-text: white;
+    --card-bg: white;
+    --border-color: #ccc;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f4f4;
+    --header-bg: #000;
+    --header-text: #fff;
+    --card-bg: #2d2d2d;
+    --border-color: #444;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--header-bg);
+    color: var(--header-text);
     padding: 1rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#theme-toggle {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: var(--header-text);
+    color: var(--header-bg);
+    border: none;
+    border-radius: 4px;
 }
 
 main {
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
-    background-color: white;
+    background-color: var(--card-bg);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 #food-form form {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2rem;
 }
 
 #food-form input {
     flex: 1;
+    min-width: 120px;
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
 }
 
 #food-form button {
     padding: 0.5rem 1rem;
-    background-color: #333;
-    color: white;
-    border: none;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    border: 1px solid var(--header-text);
     border-radius: 4px;
     cursor: pointer;
 }
@@ -53,7 +91,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
 }
 
@@ -69,5 +107,5 @@ main {
 #summary {
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--border-color);
 }
