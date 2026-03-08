@@ -150,3 +150,9 @@ main {
 #partnership-form button:hover {
     background-color: #218838;
 }
+
+#comments {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+}
