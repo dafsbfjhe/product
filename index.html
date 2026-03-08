@@ -1,14 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <h1>Diet Tracker</h1>
+    </header>
+    <main>
+        <section id="food-form">
+            <h2>Add Food</h2>
+            <form>
+                <input type="text" id="food-name" placeholder="Food name" required>
+                <input type="number" id="calories" placeholder="Calories" required>
+                <input type="number" id="protein" placeholder="Protein (g)" required>
+                <input type="number" id="carbs" placeholder="Carbs (g)" required>
+                <input type="number" id="fat" placeholder="Fat (g)" required>
+                <button type="submit">Add</button>
+            </form>
+        </section>
+        <section id="food-list">
+            <h2>Today's Food</h2>
+            <div id="food-items"></div>
+        </section>
+        <section id="summary">
+            <h2>Summary</h2>
+            <div id="total-calories">Total Calories: 0</div>
+            <div id="total-protein">Total Protein: 0g</div>
+            <div id="total-carbs">Total Carbs: 0g</div>
+            <div id="total-fat">Total Fat: 0g</div>
+        </section>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>
