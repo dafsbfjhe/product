@@ -1,71 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="google-adsense-account" content="ca-pub-8791072969532943">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8791072969532943"
+     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diet Tracker</title>
+    <title>Diet Tracker - Smart Nutrition & Health Guide</title>
+    <meta name="description" content="Manage your daily nutrition with our smart Diet Tracker. Get health tips and stay fit.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Diet Tracker</h1>
-        <button id="theme-toggle">Dark Mode</button>
+        <nav>
+            <div class="logo">Diet Tracker</div>
+            <ul class="nav-links">
+                <li><a href="#tracker">Tracker</a></li>
+                <li><a href="#health-tips">Health Tips</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#partnership-form">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">Dark Mode</button>
+        </nav>
     </header>
+
     <main>
-        <section id="food-form">
-            <h2>Add Food</h2>
-            <form>
-                <input type="text" id="food-name" placeholder="Food name" required>
-                <input type="number" id="calories" placeholder="Calories" required>
-                <input type="number" id="protein" placeholder="Protein (g)" required>
-                <input type="number" id="carbs" placeholder="Carbs (g)" required>
-                <input type="number" id="fat" placeholder="Fat (g)" required>
-                <button type="submit">Add</button>
-            </form>
+        <!-- Hero Section for Professionalism -->
+        <section id="hero">
+            <h1>Your Journey to a Healthier Life Starts Here</h1>
+            <p>Track your nutrition, learn about balanced diets, and achieve your fitness goals with our intuitive platform.</p>
         </section>
-        <section id="food-list">
-            <h2>Today's Food</h2>
-            <div id="food-items"></div>
+
+        <!-- Main Tool Section -->
+        <section id="tracker" class="container">
+            <div class="grid-layout">
+                <div id="food-form-container">
+                    <h2>Add Daily Intake</h2>
+                    <form id="food-form">
+                        <div class="form-group">
+                            <input type="text" id="food-name" placeholder="Food name (e.g., Apple)" required>
+                        </div>
+                        <div class="form-grid">
+                            <input type="number" id="calories" placeholder="Calories" required>
+                            <input type="number" id="protein" placeholder="Protein (g)" required>
+                            <input type="number" id="carbs" placeholder="Carbs (g)" required>
+                            <input type="number" id="fat" placeholder="Fat (g)" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Add to Journal</button>
+                    </form>
+                </div>
+
+                <div id="food-list-container">
+                    <h2>Today's Journal</h2>
+                    <div id="food-items"></div>
+                </div>
+            </div>
+
+            <div id="summary">
+                <h2>Nutrition Summary</h2>
+                <div class="summary-cards">
+                    <div class="card">
+                        <span class="label">Calories</span>
+                        <span id="total-calories" class="value">0</span>
+                    </div>
+                    <div class="card">
+                        <span class="label">Protein</span>
+                        <span id="total-protein" class="value">0g</span>
+                    </div>
+                    <div class="card">
+                        <span class="label">Carbs</span>
+                        <span id="total-carbs" class="value">0g</span>
+                    </div>
+                    <div class="card">
+                        <span class="label">Fat</span>
+                        <span id="total-fat" class="value">0g</span>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="summary">
-            <h2>Summary</h2>
-            <div id="total-calories">Total Calories: 0</div>
-            <div id="total-protein">Total Protein: 0g</div>
-            <div id="total-carbs">Total Carbs: 0g</div>
-            <div id="total-fat">Total Fat: 0g</div>
+
+        <!-- NEW Content Section: Health Tips (Crucial for AdSense) -->
+        <section id="health-tips" class="container">
+            <h2>Essential Health & Nutrition Tips</h2>
+            <div class="tips-grid">
+                <article>
+                    <h3>The Importance of Protein</h3>
+                    <p>Protein is the building block of your muscles. Incorporating lean protein sources like chicken breast, beans, and tofu into your diet can help with muscle recovery and satiety.</p>
+                </article>
+                <article>
+                    <h3>Complex vs. Simple Carbs</h3>
+                    <p>Focus on complex carbohydrates like brown rice and sweet potatoes. These provide steady energy levels throughout the day compared to sugary snacks.</p>
+                </article>
+                <article>
+                    <h3>Hydration is Key</h3>
+                    <p>Drinking enough water is essential for metabolism. Aim for at least 8 glasses a day to keep your body functioning at its best.</p>
+                </article>
+            </div>
         </section>
-        <section id="partnership-form">
-            <h2>Partnership Inquiry</h2>
+
+        <!-- NEW Content Section: About (Builds Authority) -->
+        <section id="about" class="container dark-bg">
+            <h2>About Diet Tracker</h2>
+            <p>Diet Tracker was created to simplify the process of monitoring nutritional intake. We believe that awareness is the first step toward health. Our platform provides users with the tools they need to make informed decisions about their diet.</p>
+        </section>
+
+        <!-- Partnership Section -->
+        <section id="partnership-form" class="container">
+            <h2>Partnership & Support</h2>
+            <p>Have questions or want to collaborate? Reach out to us below.</p>
             <form action="https://formspree.io/f/mreybyvr" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Inquiry</button>
+                <textarea name="message" placeholder="How can we help you?" required></textarea>
+                <button type="submit" class="btn-secondary">Send Message</button>
             </form>
         </section>
-        <section id="comments">
-            <h2>Comments</h2>
+
+        <section id="comments" class="container">
+            <h2>Community Discussion</h2>
             <div id="disqus_thread"></div>
             <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
+                (function() {
                 var d = document, s = d.createElement('script');
                 s.src = 'https://diet-tracker.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </section>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Diet Tracker. Empowering your health journey.</p>
+            <div class="footer-links">
+                <a href="#privacy-policy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#partnership-form">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
